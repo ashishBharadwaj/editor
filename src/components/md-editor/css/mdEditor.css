@@ -19,6 +19,19 @@
     cursor: pointer;
     border: 1px solid black;
 }
+.previewContainer{
+    padding: 10px;
+    display: grid;
+    grid-template-rows: 28px auto;
+}
+.previewTitle{
+    font-weight: bolder;
+    text-align: center;
+}
+.previewTextArea{
+    border: 1px dashed black;
+    padding: 5px;
+}
 .material-icons {
   font-family: 'Material Icons';
   font-weight: normal;

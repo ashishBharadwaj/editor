@@ -89,7 +89,7 @@ export default class MdEditor extends React.Component
             {
                 name: 'horizontalRule',
                 iconName: 'power_input',
-                markUpStart: '---',
+                markUpStart: '___',
                 isSingleTaggedMarkup: true
             },
         ]
@@ -112,7 +112,7 @@ export default class MdEditor extends React.Component
     const selectionStartIndex = this.editorTextArea.current.selectionStart;
     const selectionEndIndex = this.editorTextArea.current.selectionEnd;
 
-    if(selectionStartIndex !== selectionEndIndex){
+    if(selectionStartIndex !== selectionEndIndex || (selectionStartIndex === selectionEndIndex && config.name === Constants.HRConfig)){
         const currentText = this.state.editorText;
         const selectedText = currentText.substring(selectionStartIndex , selectionEndIndex);
         const newEditorText = this.addRemoveMarkup(selectedText, config, currentText, selectionStartIndex, selectionEndIndex);
@@ -181,7 +181,13 @@ export default class MdEditor extends React.Component
                         ref={this.editorTextArea}>
                 </textarea>
              </div>
-             <div className= {Constants.PriviewTextAreaClassName} dangerouslySetInnerHTML={{__html:this.state.previewText}} ></div>
+             <div className={Constants.PreviewContainerClassName}>
+                <div className= {Constants.PreviewTitleClassName}>
+                    {Constants.PreviewTitle}
+                </div>
+                <div className= {Constants.PriviewTextAreaClassName} dangerouslySetInnerHTML={{__html:this.state.previewText}} ></div>
+             </div>
+             
          </div>
      );
  }

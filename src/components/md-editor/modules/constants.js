@@ -5,7 +5,11 @@ const Constants = {
     PriviewTextAreaClassName: "previewTextArea",
     ToolBarContainerClassName: "toolBarContainer",
     ToolBarElementClassName: "toolBarElement",
-    IconClassName:"material-icons"
+    IconClassName:"material-icons",
+    HRConfig: "horizontalRule",
+    PreviewContainerClassName: "previewContainer",
+    PreviewTitleClassName: "previewTitle",
+    PreviewTitle: "Markdown Preview  Window"
 }
 
 export default Constants;
