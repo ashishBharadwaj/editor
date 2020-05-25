@@ -1,6 +1,8 @@
 # editor
 WYSIWYG editor
 
+[**Live Demo**](https://ashishbharadwaj.github.io/editor/)
+
 # Running the app in local:
 
     ** Prequisite: Git, Node, Yarn package manager
